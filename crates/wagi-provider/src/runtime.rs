@@ -10,7 +10,7 @@ use wasmtime::InterruptHandle;
 use kubelet::container::Status;
 use kubelet::handle::StopHandler;
 
-use serde::{Serialize, Deserialize};
+use serde::{Deserialize, Serialize};
 pub struct Runtime {
     handle: JoinHandle<anyhow::Result<()>>,
     interrupt_handle: InterruptHandle,
@@ -52,17 +52,21 @@ pub struct WagiModulesConfig {
 }
 
 impl WagiModulesConfig {
-    pub(crate) async fn build_wagi_router(self) -> anyhow::Result<wagi::Router> { // TODO: Maybe add wagi::Router::build_from_serde(...)
+    pub(crate) async fn build_wagi_router(self) -> anyhow::Result<wagi::Router> {
+        // TODO: Maybe add wagi::Router::build_from_serde(...)
         let mut temp_file = tempfile::NamedTempFile::new()?;
 
-        { // debug
+        {
+            // debug
             let config_data = toml::to_string_pretty(&self)?;
             println!("{}", config_data);
         }
 
         let config_data = toml::to_string(&self)?;
         write!(temp_file, "{}", config_data)?;
-        wagi::Router::builder().build_from_modules_toml(temp_file.path()).await
+        wagi::Router::builder()
+            .build_from_modules_toml(temp_file.path())
+            .await
     }
 }
 

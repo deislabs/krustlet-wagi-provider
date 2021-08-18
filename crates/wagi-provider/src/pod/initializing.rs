@@ -1,7 +1,7 @@
+use crate::{PodState, ProviderState};
 use kubelet::backoff::BackoffStrategy;
 use kubelet::pod::state::prelude::*;
 use kubelet::state::common::error::Error;
-use crate::{PodState, ProviderState};
 
 use super::starting::Starting;
 

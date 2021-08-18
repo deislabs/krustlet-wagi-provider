@@ -8,6 +8,7 @@ use std::path::{Path, PathBuf};
 use std::sync::Arc;
 
 use async_trait::async_trait;
+use kubelet::node;
 use kubelet::node::Builder;
 use kubelet::plugin_watcher::PluginRegistry;
 use kubelet::pod::state::prelude::SharedState;
@@ -21,7 +22,6 @@ use kubelet::state::common::terminated::Terminated;
 use kubelet::state::common::{GenericProvider, GenericProviderState};
 use kubelet::store::Store;
 use kubelet::volume::VolumeRef;
-use kubelet::node;
 
 use tokio::sync::RwLock;
 
