@@ -55,6 +55,7 @@ serde = "1.0"
 tokio = {version = "1.0", features = ["macros", "rt-multi-thread", "time"]}
 tracing-subscriber = "0.2"
 wagi-provider = {path = "./crates/wagi-provider", version = "0.1.0", default-features = false}
+notify = "=5.0.0-pre.10"
 
 [workspace]
 members = [
