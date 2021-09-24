@@ -69,4 +69,3 @@ jobs:
       - name: Build
         run: |
           just build ${{ matrix.config.args }}
-          just test
