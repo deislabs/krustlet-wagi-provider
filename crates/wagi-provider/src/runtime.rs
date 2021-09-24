@@ -29,21 +29,6 @@ impl StopHandler for Runtime {
     }
 }
 
-// /// WasiRuntime provides a WASI compatible runtime. A runtime should be used for
-// /// each "instance" of a process and can be passed to a thread pool for running
-// pub struct WagiRuntime {
-//     /// name of the process
-//     name: String,
-//     /// Data needed for the runtime
-//     data: Arc<Data>,
-//     /// The tempfile that output from the wasmtime process writes to
-//     output: Arc<NamedTempFile>,
-//     /// A channel to send status updates on the runtime
-//     status_sender: Sender<Status>,
-//     /// Configuration for the WAGI.
-//     wagi_modules_config: WagiModulesConfig,
-// }
-
 #[derive(Debug, Clone, Default, Serialize)]
 pub struct WagiModulesConfig {
     pub default_host: Option<String>,
