@@ -23,11 +23,11 @@ tempfile = "3.1"
 wasmtime = "0.30.0"
 toml = "0.5"
 indexmap = { version = "^1.6.2", features = ["serde"] }
-wagi = { git = "https://github.com/deislabs/wagi", version = "0.4.0" }
+wagi = { git = "https://github.com/deislabs/wagi", version = "0.4.0", rev = "9abecade" }
 tokio = { version = "1.0", features = ["fs", "macros", "io-util", "sync"] }
 chrono = { version = "0.4", features = ["serde"] }
 krator = { version = "0.4", default-features = false }
 kube = { version = "0.58", default-features = false }
-kubelet = { git = "https://github.com/krustlet/krustlet", version = "1.0.0-alpha.1", features = ["derive"], default-features = false }
+kubelet = { git = "https://github.com/krustlet/krustlet", tag = "v1.0.0-alpha.1", version = "1.0.0-alpha.1", features = ["derive"], default-features = false }
 tracing = { version = "0.1", features = ["log"] }
 hyper = {version = "0.14", features = ["full"]}
