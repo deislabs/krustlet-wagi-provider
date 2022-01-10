@@ -3,7 +3,7 @@
 **WARNING:** This is experimental code.
 It is not considered production-grade by its developers, neither is it "supported" software.
 
-This is a [Krustlet](https://github.com/deislabs/krustlet) [Provider](https://github.com/deislabs/krustlet/blob/master/docs/topics/architecture.md#providers) implementation for the [WAGI](https://github.com/deislabs/wagi) runtime.
+This is a [Krustlet](https://github.com/deislabs/krustlet) [Provider](https://docs.krustlet.dev/topics/architecture/#providers) implementation for the [WAGI](https://github.com/deislabs/wagi) runtime.
 
 ## Documentation
 
